@@ -1,0 +1,9 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Version=1.0
+Terminal=false
+Type=Application
+Name=Node-RED Dashboard
+Exec=/usr/bin/chromium-browser --app=http://aquaponia42.local:1880/ui --start-fullscreen --force-device-scale-factor=0.50
+Icon=chrome-ihojnibaojcmgeihppincbloeiaconnd-Default
+

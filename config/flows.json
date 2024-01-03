@@ -1,0 +1,564 @@
+[
+    {
+        "id": "65420bea8da6ee63",
+        "type": "tab",
+        "label": "main",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "fe1d7442e78c489d",
+        "type": "subflow",
+        "name": "Sensores",
+        "info": "",
+        "category": "sensores",
+        "in": [],
+        "out": [
+            {
+                "x": 730,
+                "y": 120,
+                "wires": [
+                    {
+                        "id": "4c47c357be84c475",
+                        "port": 0
+                    }
+                ]
+            },
+            {
+                "x": 730,
+                "y": 180,
+                "wires": [
+                    {
+                        "id": "1c6fc089bbb40c97",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [],
+        "meta": {},
+        "color": "#FFAAAA",
+        "outputLabels": [
+            "json",
+            "string"
+        ],
+        "icon": "node-red/arduino.svg"
+    },
+    {
+        "id": "1c6fc089bbb40c97",
+        "type": "junction",
+        "z": "fe1d7442e78c489d",
+        "x": 300,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9f4fe2433fce69a5",
+        "type": "serial-port",
+        "serialport": "/dev/ttyUSB0",
+        "serialbaud": "115200",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "waitfor": "",
+        "dtr": "none",
+        "rts": "none",
+        "cts": "none",
+        "dsr": "none",
+        "newline": "1000",
+        "bin": "false",
+        "out": "time",
+        "addchar": "",
+        "responsetimeout": "10000"
+    },
+    {
+        "id": "9c43a39c5a15ef91",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-dark",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "Century Gothic,CenturyGothic,AppleGothic,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "reset": false
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#097479",
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#0eb8c0",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "Century Gothic,CenturyGothic,AppleGothic,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "deep-purple",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "0181de9e53f22bdc",
+        "type": "ui_tab",
+        "name": "Sensores",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "6a32e26dadff3966",
+        "type": "ui_group",
+        "name": "thermal",
+        "tab": "0181de9e53f22bdc",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "0471cf36487eb019",
+        "type": "ui_group",
+        "name": " physical",
+        "tab": "0181de9e53f22bdc",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "3f72f072aeec3d3b",
+        "type": "ui_group",
+        "name": "chemical",
+        "tab": "0181de9e53f22bdc",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "433738b0a181fc12",
+        "type": "ui_tab",
+        "name": "broker connection",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "133b80ab336fd02f",
+        "type": "ui_group",
+        "name": "Command",
+        "tab": "433738b0a181fc12",
+        "order": 1,
+        "disp": false,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "8f00f8029ce46c33",
+        "type": "serial in",
+        "z": "fe1d7442e78c489d",
+        "name": "",
+        "serial": "9f4fe2433fce69a5",
+        "x": 190,
+        "y": 120,
+        "wires": [
+            [
+                "702dc77350f491b7",
+                "1c6fc089bbb40c97"
+            ]
+        ]
+    },
+    {
+        "id": "702dc77350f491b7",
+        "type": "json",
+        "z": "fe1d7442e78c489d",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 350,
+        "y": 120,
+        "wires": [
+            [
+                "4c47c357be84c475"
+            ]
+        ]
+    },
+    {
+        "id": "4c47c357be84c475",
+        "type": "change",
+        "z": "fe1d7442e78c489d",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "timestamp",
+                "pt": "msg",
+                "to": "",
+                "tot": "date"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 540,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "30dc247b80350840",
+        "type": "debug",
+        "z": "65420bea8da6ee63",
+        "name": "sáida dos sensores",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 390,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "c4a1e93a3b6f5ce8",
+        "type": "ui_gauge",
+        "z": "65420bea8da6ee63",
+        "name": "",
+        "group": "6a32e26dadff3966",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "temperature1",
+        "label": "°C",
+        "format": "{{payload.temperature.value[0]}}",
+        "min": "-40",
+        "max": "130",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 370,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "a0f84588b849fa29",
+        "type": "ui_gauge",
+        "z": "65420bea8da6ee63",
+        "name": "",
+        "group": "6a32e26dadff3966",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "temperature2",
+        "label": "°C",
+        "format": "{{payload.temperature.value[1]}}",
+        "min": "-40",
+        "max": "130",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 370,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "433be757a4a83621",
+        "type": "ui_gauge",
+        "z": "65420bea8da6ee63",
+        "name": "",
+        "group": "0471cf36487eb019",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "flow",
+        "label": "ml/s",
+        "format": "{{payload.flow.value[0]}}",
+        "min": "0",
+        "max": "1000",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 350,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "2afc01cb08dd0b74",
+        "type": "ui_gauge",
+        "z": "65420bea8da6ee63",
+        "name": "",
+        "group": "0471cf36487eb019",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "turbidity",
+        "label": "ntu",
+        "format": "{{payload.turbidity.value[0]}}",
+        "min": "0",
+        "max": "3500",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 360,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "bb39c0187e938c3c",
+        "type": "ui_gauge",
+        "z": "65420bea8da6ee63",
+        "name": "",
+        "group": "3f72f072aeec3d3b",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "ph",
+        "label": "ph",
+        "format": "{{payload.ph.value[0]}}",
+        "min": "0",
+        "max": "14",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 350,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "3c987ec3c7bf0de1",
+        "type": "ui_gauge",
+        "z": "65420bea8da6ee63",
+        "name": "",
+        "group": "3f72f072aeec3d3b",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "conductivity",
+        "label": "ppm",
+        "format": "{{payload.tds.value[0]}}",
+        "min": "0",
+        "max": "1000",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 370,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "4168eef24e0dad0c",
+        "type": "subflow:fe1d7442e78c489d",
+        "z": "65420bea8da6ee63",
+        "name": "",
+        "x": 120,
+        "y": 240,
+        "wires": [
+            [
+                "30dc247b80350840",
+                "c4a1e93a3b6f5ce8",
+                "a0f84588b849fa29",
+                "433be757a4a83621",
+                "2afc01cb08dd0b74",
+                "bb39c0187e938c3c",
+                "3c987ec3c7bf0de1",
+                "c8dcc6a22846b386"
+            ],
+            [
+                "3cf8971af1794a7e"
+            ]
+        ]
+    },
+    {
+        "id": "a3f87f772238448b",
+        "type": "ui_button",
+        "z": "65420bea8da6ee63",
+        "name": "",
+        "group": "133b80ab336fd02f",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "connect at brocker",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 390,
+        "y": 520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3cf8971af1794a7e",
+        "type": "debug",
+        "z": "65420bea8da6ee63",
+        "name": "string",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 350,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "c8dcc6a22846b386",
+        "type": "mqtt out",
+        "z": "65420bea8da6ee63",
+        "d": true,
+        "name": "",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "",
+        "x": 350,
+        "y": 80,
+        "wires": []
+    }
+]
